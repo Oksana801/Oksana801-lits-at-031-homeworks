@@ -1,34 +1,26 @@
 package com.Selenium.homework1;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 public class task1 {
     public static void main(String[] args) {
-
-        List<String> l1 = new LinkedList<String>();
-        l1.add("car");
-        l1.add("bus");
-        l1.add("taxi");
-        l1.add("taxi");
-        l1.add("bus");
-        l1.add("bus");
-        l1.add("train");
-        l1.add("taxi");
-
-        //System.out.print("\t" + l1);
-        List<String> head = l1.subList(0, 4);
-        List<String> tail = l1.subList(5, 8);
+        List list = new ArrayList();
+        list.addAll(Arrays.asList("car", "bus", "taxi", "taxi","bus", "bus", "train", "taxi"));
 
 
-        for (int i = 0; i < head.size(); i++) {
-            if (head.get(i).equals("taxi")) {
-                head.set(i, "minivan");
+
+        list.subList(0, list.size()/2);
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).equals("taxi")) {
+                list.set(i, "minivan");
 
 
             }
         }
-        System.out.print(l1);
+        System.out.print(list);
 
     }
 }
