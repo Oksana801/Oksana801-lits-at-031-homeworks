@@ -1,0 +1,5 @@
+always position our data files in the program directory and rely on the simple default16
+Creating the BufferedReader is a two step process. First, we create a FileReader object,1
+passing to its constructor the name of the file we want to open in the file system. Given a2
+in the program's directory alongside the .java files.4
+"buffering" which is a technique that uses a scratch area of memory to speed up the file8
