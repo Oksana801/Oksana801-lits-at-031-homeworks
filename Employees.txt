@@ -1,0 +1,7 @@
+1   George_Washington   Courier  		    100
+2   John_Adams          Cleaner       		150
+3   Thomas_Jefferson    Secretary    		200
+4   James_Madison       Consultant       	250
+5   James_Monroe 	    Doctor 			    300
+6  Thomas_Jefferson    Secretary    		200
+2  Thomas_Jefferson    Secretary    		200
