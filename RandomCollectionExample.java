@@ -14,7 +14,7 @@ public class RandomCollectionExample {
         int max = 15;
         int randomLength;
         for (int i = 0; i < amount; i++) {
-            randomLength = randomChar(min, max);
+            randomLength = ThreadLocalRandom.current().nextInt(min, max + 1);
             myList.add(randomString(randomLength));
         }
         return myList;
@@ -25,13 +25,9 @@ public class RandomCollectionExample {
         int min = 65; //A
         int max = 122; //z
         for (int i = 0; i < length; i++) {
-            result.append(randomChar(min, max));
+            result.append((char)(ThreadLocalRandom.current().nextInt(min, max + 1)));
         }
         return result.toString();
-    }
-
-    private static char randomChar(int min, int max) {
-        return (char) ThreadLocalRandom.current().nextInt(min, max + 1);
     }
 
 }
