@@ -23,9 +23,9 @@ import java.util.Map;
             br.close();
             fr.close();
 
-            File file1 = new File("src/test/java/powerOfTwo.txt");
+            File fileToWrite = new File("src/test/java/powerOfTwo.txt");
 
-            PrintWriter writer = new PrintWriter(file1);
+            PrintWriter writer = new PrintWriter(fileToWrite);
             for (String tempKey : allFileMap.keySet()) {
                 if (isPowerOfTwo(Integer.valueOf(tempKey))) {
                     writer.println(allFileMap.get(tempKey));
