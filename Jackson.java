@@ -16,8 +16,8 @@ public class Jackson {
                 = new TypeReference<HashMap<String, Object>>() {
         };
 
-        HashMap<String, Object> o = mapper.readValue(from, typeRef);
-        System.out.println(o);
+        HashMap<String, Object> map = mapper.readValue(from, typeRef);
+        System.out.println(map);
 
     }
 
