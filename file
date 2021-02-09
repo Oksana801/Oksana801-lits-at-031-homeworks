@@ -1,0 +1,17 @@
+Creating the BufferedReader is a two step process. First, we create a FileReader object,1
+passing to its constructor the name of the file we want to open in the file system. Given a2
+simple filename to read such as "file.txt", Java by default looks for a file with that name
+in the program's directory alongside the .java files.4
+The FileReader object knows how to read text files, but it does not have all the features
+we need. Therefore, we create a BufferedReader built on the FileReader, as shown below.
+The BufferedReader supports the readLine() method we want to use, and it does
+"buffering" which is a technique that uses a scratch area of memory to speed up the file8
+reading process
+// The above can be written all on one line like this...
+BufferedReader in = new BufferedReader(new FileReader("file.txt"));
+FileReader and BufferedReader work with files made of plain text. For non-text files
+(.jpeg, .mp3, ...) use FileInputStream instead. For 106A, we will only directly read text
+files. Also, there are ways that Java code can specify files in a directory other than the
+program directory, however we will not do that in CS106A. For simplicity, we will
+always position our data files in the program directory and rely on the simple default16
+behavior.
