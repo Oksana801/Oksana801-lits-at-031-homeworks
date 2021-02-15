@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test thread-count="5" name="Test microsoft edge" parallel="methods">
+        <parameter name="browser" value="microsoft edge"/>
+          <classes>
+              <class name="com.Gmail"/>
+        </classes>
+    </test>
+
+    <test thread-count="5" name="Test chrome" parallel="methods">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.Gmail"/>
+        </classes>
+    </test>
+</suite>
