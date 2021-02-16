@@ -1,23 +1,29 @@
-public class Employee implements Comparable<Employee> {
-    private int ID;
-    private String NAME;
+public class Employee {
+    private int Id;
+    private String Name;
     private String Position;
-    private int Salary;
 
-    public int getID() {
-        return ID;
+    public Employee() {
+
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public Employee(String s) {
     }
 
-    public String getNAME() {
-        return NAME;
+    public int getId() {
+        return Id;
     }
 
-    public void setNAME(String NAME) {
-        this.NAME = NAME;
+    public void setId(int id) {
+        Id = id;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
     }
 
     public String getPosition() {
@@ -28,38 +34,28 @@ public class Employee implements Comparable<Employee> {
         Position = position;
     }
 
-    public int getSalary() {
+    public String getSalary() {
         return Salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(String salary) {
         Salary = salary;
     }
 
-    public Employee(int ID, String NAME, String Position, int Salary) {
-        this.ID = ID;
-        this.NAME = NAME;
+    private String Salary;
+
+    public Employee(int id, String name, String Position, String Salary) {
+        this.Id = id;
+        this.Name = name;
         this.Position = Position;
         this.Salary = Salary;
     }
 
-    public Employee() {
-
-    }
 
     public String toString() {
-        return " ID: " + ID + "; NAME: " + NAME + "\n";
-    }
+        return "Employee [id=" + Id + ", name=" + Name + ", dob=" + Salary + ", email=" + Position
+                + "]";
 
-    @Override
-    public int compareTo(Employee employee) {
-        int result = this.NAME.compareTo(employee.NAME);
-        if (result == 0)
-            return Integer.compare(this.ID, employee.ID);
-
-        return result;
     }
 }
-
-
 
